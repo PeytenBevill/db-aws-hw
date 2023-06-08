@@ -38,19 +38,21 @@ We are going to run a couple SQL queries and put the answers in the "Query Respo
 
 ## Query Responses
 
-1. Sums
-  * AK:
-  * CT
-  * TX:
-  * WY:
+1. Sums: SELECT SUM(id) FROM usersAddress WHERE state LIKE '[enter state here]';
+  * AK: 64
+  * CT: 1556
+  * TX: 7435
+  * WY: 822
 
 2.
-  * Area code:
+  * Area code: SELECT SUBSTR(phone1, 1, 3) AS num, COUNT(*) AS count FROM usersContact GROUP BY num ORDER BY count DESC;
+  * Most Popular: 973
 
 3.
-  * first_name:
-  * county:
-  * county total:
+  * Results: SELECT MIN(users.first_name) AS min_name, county, COUNT(*) AS count FROM users JOIN usersAddress ON users.id = usersAddress.user_id GROUP BY usersAddress.county HAVING count > 10 ORDER BY count DESC;
+  * first_name: Alecia
+  * county: Los Angeles
+  * county total: 18
 
 
 ## Summary
