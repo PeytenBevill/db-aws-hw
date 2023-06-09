@@ -39,10 +39,10 @@ We are going to run a couple SQL queries and put the answers in the "Query Respo
 ## Query Responses
 
 1. Sums: SELECT SUM(id) FROM usersAddress WHERE state LIKE '[enter state here]';
-  * AK: 64
-  * CT: 1556
-  * TX: 7435
-  * WY: 822
+  * AK: 1422
+  * CT: 999
+  * TX: 7908
+  * WY: 1271
 
 2.
   * Area code: SELECT SUBSTR(phone1, 1, 3) AS num, COUNT(*) AS count FROM usersContact GROUP BY num ORDER BY count DESC;
